@@ -9,18 +9,18 @@ before_script:
   - sudo apt-get install wget unzip > /dev/null
 
   # package the module
-  - mkdir xmlprc
+  - mkdir xmlrpc
   - mv xmlrpc.* xmlrpc/
   - mv tests xmlrpc/
 
   # get backdrop
   - wget https://github.com/backdrop/backdrop/archive/1.x.zip
   - unzip backdrop-1.x.zip
-  - mv backdrop/core ./
-  - mv backdrop/profiles ./
-  - mv backdrop/sites ./
-  - mv backdrop/.htdocs ./
-  - mv backdrop/index.php ./
+  - mv backdrop-1.x/core ./
+  - mv backdrop-1.x/profiles ./
+  - mv backdrop-1.x/sites ./
+  - mv backdrop-1.x/.htdocs ./
+  - mv backdrop-1.x/index.php ./
 
   # install the module
   - mv xmlrpc sites/all/modules/
@@ -56,7 +56,7 @@ before_script:
   - drush si --db-url=mysql://travis:@localhost/backdrop -y
   - chmod go-w sites/default
   - drush en simpletest -y
-script: php -d display_errors="stderr" ./core/scripts/run-tests.sh --php `which php` --concurrency 12 --url 'http://localhost' --color --all
+script: php -d display_errors="stderr" ./core/scripts/run-tests.sh --php `which php` --concurrency 12 --url 'http://localhost' --color XML-RPC
 after_failure:
   - echo "Failures detected. Outputing additional logs:"
   - sudo cat /var/log/apache2/error.log
