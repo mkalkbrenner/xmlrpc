@@ -15,7 +15,7 @@ before_script:
 
   # get backdrop
   - wget https://github.com/backdrop/backdrop/archive/1.x.zip
-  - unzip backdrop-1.x.zip
+  - unzip 1.x.zip
   - mv backdrop-1.x/core ./
   - mv backdrop-1.x/profiles ./
   - mv backdrop-1.x/sites ./
