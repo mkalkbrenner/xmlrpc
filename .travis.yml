@@ -19,7 +19,7 @@ before_script:
   - mv backdrop-1.x/core ./
   - mv backdrop-1.x/profiles ./
   - mv backdrop-1.x/sites ./
-  - mv backdrop-1.x/.htdocs ./
+  - mv backdrop-1.x/.htaccess ./
   - mv backdrop-1.x/index.php ./
 
   # install the module
