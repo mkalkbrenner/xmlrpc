@@ -1,7 +1,6 @@
 name = XML-RPC
 description = Provides XML-RPC functionality.
-#package = Core
-#version = VERSION
+package = Core
 backdrop = 1.x
 core = 7.x
 
