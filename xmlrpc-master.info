@@ -1,0 +1,7 @@
+name = XML-RPC
+description = Provides XML-RPC functionality.
+#package = Core
+#version = VERSION
+backdrop = 1.x
+
+files[] = tests/xmlrpc.test
